@@ -55,12 +55,12 @@ document.getElementsByTagName('button')[0].onclick = function() {
         alert("invalid input");
         return;
     }
-    if (result[0] + result[1] > result[2] && result[0] + result[2] > result[1] && result[1] + result[2] > result[0]) {
+    else if (result[0] + result[1] > result[2] && result[0] + result[2] > result[1] && result[1] + result[2] > result[0]) {
         alert("yes, triangle can be constructed");
     }
     else alert("no, triangle cannot be constructed");
  };
 
-document.cookie = "name=Basil_Kvasil; path=/";
+document.cookie = "name=Basil_Kvasil; value=ahah; path=/";
 alert(document.cookie);
 
