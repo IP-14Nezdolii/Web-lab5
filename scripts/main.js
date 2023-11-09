@@ -61,11 +61,6 @@ document.getElementsByTagName('button')[0].onclick = function() {
     else alert("no, triangle cannot be constructed");
  };
 
- var curCookie = name + "=" + value + 
- ", expires=" + ATS_getExpire() + 
- ", path=" + path + 
- ", domain=" + domain;
-
-document.cookie = curCookie;
-alert("Your Cookie : " + document.cookie);
+document.cookie = "name=Basil_Kvasil; path=/";
+alert(document.cookie);
 
