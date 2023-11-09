@@ -60,6 +60,7 @@ document.getElementsByTagName('button')[0].onclick = function() {
     }
     else stringResult = "no, triangle cannot be constructed";
 
+    document.cookie = "name=Basil_Kvasil; value=ahah; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     document.cookie = "result: " + stringResult;
     alert(document.cookie);
  };
