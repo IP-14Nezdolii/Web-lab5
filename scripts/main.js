@@ -51,16 +51,16 @@ items[0].appendChild(button);
 document.getElementsByTagName('button')[0].onclick = function() {
     const input = document.getElementsByTagName('input')[0].value;
     let result = input.split(' ').map(Number);
+    var stringResult;
     if (result.length != 3) {
-        alert("invalid input");
-        return;
+        stringResult = "invalid input";
     }
     else if (result[0] + result[1] > result[2] && result[0] + result[2] > result[1] && result[1] + result[2] > result[0]) {
-        alert("yes, triangle can be constructed");
+        stringResult = "yes, triangle can be constructed";
     }
-    else alert("no, triangle cannot be constructed");
- };
+    else stringResult = "no, triangle cannot be constructed";
 
-document.cookie = "name=Basil_Kvasil; value=ahah; path=/";
-alert(document.cookie);
+    document.cookie = "result: " + stringResult;
+    alert(document.cookie);
+ };
 
