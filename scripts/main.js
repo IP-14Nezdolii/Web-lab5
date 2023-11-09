@@ -56,6 +56,11 @@ function deleteData(){
     document.cookie = "data:; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
 };
 
+ if((document.cookie == "") == false){
+    alert(document.cookie);
+    if(confirm("Delete data?")) deleteData();
+ }
+
 document.getElementsByTagName('button')[0].onclick = function() {
     const input = document.getElementsByTagName('input')[0].value;
     let result = input.split(' ').map(Number);
@@ -71,9 +76,4 @@ document.getElementsByTagName('button')[0].onclick = function() {
     saveData(stringResult);
     alert(document.cookie);
  };
-
- if((document.cookie == "") == false){
-    alert(document.cookie);
-    if(confirm("Delete data?")) deleteData();
- }
 
