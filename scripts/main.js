@@ -172,8 +172,9 @@ list.addEventListener ('dblclick', (ev) => {
         inputer.appendChild(button2);
         elem.appendChild(inputer);
 
+        if(localStorage.getItem(elem.id) == "") localStorage.setItem(elem.id, elem.getElementsByTagName('p')[0].innerText);
+        
         button1.onclick = function() {
-            if(!localStorage.getItem(elem.id)) localStorage.setItem(elem.id, elem.getElementsByTagName('p')[0].innerText);
             elem.getElementsByTagName('p')[0].innerText= form.value;
             localStorage.setItem(elem.id + "changed", elem.getElementsByTagName('p')[0].innerText);
          };
